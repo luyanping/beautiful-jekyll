@@ -1,3 +1,9 @@
+---
+layout: post
+title: vue 新学者入门
+image: /img/hello_world.jpeg
+---
+
 #### vue 新学者入门
 
 首先列出使用 vue 的几个前提
