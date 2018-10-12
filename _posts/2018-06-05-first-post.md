@@ -19,6 +19,7 @@ image: /img/hello_world.jpeg
 从 node.js 官网下载并安装 node，安装过程很简单，一路“下一步”就可以了（傻瓜式安装）。  
 安装完成之后，打开命令行工具，输入 node -v，如下图，如果出现相应的版本号，则说明安装成功。 
  
+ [foo]: <http://example.com/> "Optional Title Here"
 ! [node] /img/images/node.png "图片" 
 
 #### 二、安装 cnpm
