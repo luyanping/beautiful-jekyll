@@ -20,6 +20,7 @@ image: /img/hello_world.jpeg
 安装完成之后，打开命令行工具，输入 node -v，如下图，如果出现相应的版本号，则说明安装成功。 
  
  [foo]: <http://example.com/> "Optional Title Here"
+ <img src="/img/images/node.png"></img>
 ! [node] /img/images/node.png "图片" 
 
 #### 二、安装 cnpm
