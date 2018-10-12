@@ -1,10 +1,10 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: 关于我
+subtitle: 最喜欢的一句话：没有什么做不到，只要你想做！
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+我是一个在前端路上奋力前行的前端妹纸:
 
 - I rock a great mustache
 - I'm extremely loyal to my family
