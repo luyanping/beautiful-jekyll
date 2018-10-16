@@ -1,0 +1,187 @@
+---
+layout: post
+title: jTopo拓扑图案例
+image: /img/jTopo1.png
+---
+
+#### jTopo拓扑图简介
+
+
+##### 一、jTopo是什么  
+jTopo（Javascript Topology library)是一款完全基于HTML5 Canvas的关系、拓扑图形化界面开发工具包。  
+jTopo关注于数据的图形展示，它是面向开发人员的，需要进行二次开发。  
+使用jTopo很简单，可以快速创建一些关系图、拓扑等相关图形化的展示。只要您的数据之间存在有关联关系，都可以使用jTopo来进行人性化、图形化的展示。
+
+##### 二、jTopo简单案例—设备关系图
+
+该案例生成的最终图形如下：
+
+![](/img/jTopo1.png)
+
+* 首先要在html页面中加入画布标签：\<canvas>
+
+```html
+    <canvas width="850" height="600" id="canvas"></canvas>
+```
+
+* 其次在页面中引入拓扑图插件
+
+```html
+    <script type="text/javascript" src="js/lib/jtopo-0.4.8-min.js"></script>
+```
+
+下面看官网上的API文档，Jtopo的核心对象有6个，分别是Stage（舞台对象），Scene（场景对象），Node（节点对象），Link（连线对象），Container（容器对象），Effect.Animate（动画效果）,下面挑每个对象值得注意的地方说一下
+
+ 
+
+1 Stage：
+
+1.1 Mode属性：
+
+normal[默认]	可以点击选中单个节点（按住Ctrl可以选中多个），点中空白处可以拖拽整个画面
+drag	该模式下不可以选择节点，只能拖拽整个画面
+select	 可以框选多个节点、可以点击单个节点
+edit	在默认基础上增加了：选中节点时可以通过6个控制点来调整节点的宽、高
+ 
+
+1.2 add/remove（scene）函数：
+
+将一个场景加入到/移除出舞台效果
+
+1.3 setCenter（x,y）函数：
+
+设置舞台的中心坐标点（舞台平移）
+
+ 
+
+2 Scene：
+
+2.1 Mode属性和Stage属性一致
+
+2.2 alpha属性：场景的透明度
+
+2.3 show()/hide() 函数：
+
+表示场景的显示/隐藏
+
+ 2.4 add/remove(element)函数：
+
+ 添加对象到当前场景/移除场景中的某个元素
+
+2.5 findElements（code）函数：
+
+查找场景中的对象
+
+ 
+
+3 Node：
+
+3.1 dragable/selected/editAble/rotate属性：
+
+ 设置节点是否可以被拖动/是否被选中/是否可编辑/节点旋转的角度
+
+3.2 setImage（url）/setBound（x,y,width,height）函数：
+
+设置节点的图片/坐标和宽，高
+
+ 
+
+4Link：
+
+NodeA/NodeZ/style.strokeColor
+
+起始节点/终止节点/连线的颜色
+
+* 最后，在js中写入相关代码，即可生成该例子的图形。
+
+```js
+  $(document).ready(function(){
+    var canvas = document.getElementById('canvas');
+    var stage = new JTopo.Stage(canvas);
+
+    var scene = new JTopo.Scene();
+    scene.background = './images/bg.jpg';
+
+    function node(x, y, images){
+      var node = new JTopo.Node();
+      node.setImage('./images/' + images, true);
+      node.setLocation(x, y);
+      scene.add(node);
+      return node;
+    }
+
+    function linkNode(nodeA, nodeZ, f){
+      var link;
+      if(f){
+        link = new JTopo.FoldLink(nodeA, nodeZ);
+      }else{
+        link = new JTopo.Link(nodeA, nodeZ);
+      }
+      link.direction = 'vertical';
+      scene.add(link);
+      return link;
+    }
+
+    var s1 = node(305, 43, 'server.png');
+    s1.alarm = '2 W';
+    var s2 = node(365, 43, 'server.png');
+    var s3 = node(425, 43, 'server.png');
+
+    var g1 = node(366, 125, 'gather.png');
+    linkNode(s1, g1, true);
+    linkNode(s2, g1, true);
+    linkNode(s3, g1, true);
+
+    var g4 = node(366, 125, 'gather.png');
+    var w1 = node(324, 167, 'wanjet.png');
+    linkNode(g4, w1);
+
+    var c1 = node(364, 214, 'center.png');
+    linkNode(w1, c1);
+
+    var cloud = node(344, 259, 'cloud.png');
+    linkNode(s1, cloud, true);
+
+    var c2 = node(364, 328, 'center.png');
+    linkNode(cloud, c2);
+
+    var w2 = node(324, 377, 'wanjet.png');
+    linkNode(c2, w2);
+
+    var g2 = node(366, 411, 'gather.png');
+    linkNode(w2, g2);
+
+    function hostLink(nodeA, nodeZ){
+      var link = new JTopo.FlexionalLink(nodeA, nodeZ);
+      link.shadow = false;
+      link.offsetGap = 44;
+      scene.add(link);
+      return link;
+    }
+
+    var h1 = node(218, 520, 'host.png');
+    h1.alarm = '';
+    hostLink(g2, h1);
+    var h2 = node(292, 520, 'host.png');
+    hostLink(g2, h2);
+    var h3 = node(366, 520, 'host.png');
+    h3.alarm = '二级告警';
+    hostLink(g2, h3);
+    var h4 = node(447, 520, 'host.png');
+    hostLink(g2, h4);
+    var h5 = node(515, 520, 'host.png');
+    h5.alarm = '1M';
+    hostLink(g2, h5);
+
+    setInterval(function(){
+      if(h3.alarm == '二级告警'){
+        h3.alarm = null;
+      }else{
+        h3.alarm = '二级告警'
+      }
+    }, 600);
+
+    stage.add(scene);
+  });
+```
+
