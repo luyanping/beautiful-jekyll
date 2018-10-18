@@ -1,7 +1,7 @@
 ---
 layout: post
 title: bootstrap源码阅读——浅谈栅格系统
-image: /img/hello_world.png
+image: /img/bootstrap.png
 ---
 
 ### bootstrap4栅格系统分析
