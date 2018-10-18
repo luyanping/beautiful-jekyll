@@ -137,7 +137,7 @@ make-grid-columns()这个mixin定义scss/mixins/_grid-reamework.scss文件中：
 }
 ```
 这个mixin接受三个参数：
-1）$columns表示栅格数目默认为12
+1）$columns表示栅格数目默认为12   
 2）$gutters默认为30
 3）$breakpoints表示断点设置，这是一个全局变量，为map类型。
 这些可以在scss/mixins/_breakpoints.scss文件中和scss/_variables.scss文件中找到。
