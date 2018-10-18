@@ -159,7 +159,7 @@ make-grid-columns()这个mixin定义scss/mixins/_grid-reamework.scss文件中：
     }
 }
 ```
-我们一步一步来分析：
+我们一步一步来分析：              
 1）`@each $breakpoint in map-keys($breakpoints)`，对每一个断点进行遍历；        
 2）`breakpoint-infix`是一个函数，它定义在`css/mixins/_breakpoints.scss`文件当中， 返回一个带破折号的断点标识字符串，比如这里我们关系的就是“-sm”；           
 3）`media-breakpoint-up`是一个mixin：
