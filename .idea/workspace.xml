@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b91bc2cb-31dc-4698-aa99-f672710658c2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/js/html/threat-analysis.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/html/threat-analysis.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-9-15-test.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-9-15-test.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/html/js/threat-analysis.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/html/js/threat-analysis.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,18 +17,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="threat-analysis.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="threat-analysis.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/html/js/threat-analysis.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="366" column="10" lean-forward="true" selection-start-line="366" selection-start-column="10" selection-end-line="366" selection-end-column="10" />
+            <state relative-caret-position="252">
+              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
               <folding>
                 <element signature="e#1228#2651#0" />
-                <element signature="e#3180#3256#0" />
-                <element signature="e#3262#3427#0" />
-                <element signature="e#3466#9356#0" />
-                <element signature="e#8602#13832#0" />
+                <element signature="e#11530#13565#0" />
+                <element signature="e#14058#20985#0" />
                 <element signature="e#17614#23452#0" />
+                <element signature="e#25055#28625#0" />
               </folding>
             </state>
           </provider>
@@ -42,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="threat-analysis.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="threat-analysis.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/html/threat-analysis.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+            <state relative-caret-position="280">
+              <caret line="20" column="68" lean-forward="true" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -63,6 +63,7 @@
       <find>current_attack</find>
       <find>getPostParam</find>
       <find>borderColor</find>
+      <find>dataList</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -71,9 +72,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/html/js/threat-analysis.js" />
-        <option value="$PROJECT_DIR$/_posts/2018-9-15-test.md" />
         <option value="$PROJECT_DIR$/js/html/threat-analysis.html" />
+        <option value="$PROJECT_DIR$/_posts/2018-9-15-test.md" />
+        <option value="$PROJECT_DIR$/js/html/js/threat-analysis.js" />
       </list>
     </option>
   </component>
@@ -171,12 +172,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540109163156</updated>
-      <workItem from="1540109164924" duration="3582000" />
+      <workItem from="1540109164924" duration="5731000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3582000" />
+    <option name="totallyTimeSpent" value="5731000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -208,17 +209,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/html/js/threat-analysis.js">
+    <entry file="file://$PROJECT_DIR$/js/html/threat-analysis.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="366" column="10" lean-forward="true" selection-start-line="366" selection-start-column="10" selection-end-line="366" selection-end-column="10" />
+        <state relative-caret-position="280">
+          <caret line="20" column="68" lean-forward="true" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
           <folding>
-            <element signature="e#1228#2651#0" />
-            <element signature="e#3180#3256#0" />
-            <element signature="e#3262#3427#0" />
-            <element signature="e#3466#9356#0" />
-            <element signature="e#8602#13832#0" />
-            <element signature="e#17614#23452#0" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -230,12 +226,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/html/threat-analysis.html">
+    <entry file="file://$PROJECT_DIR$/js/html/js/threat-analysis.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        <state relative-caret-position="252">
+          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#1228#2651#0" />
+            <element signature="e#11530#13565#0" />
+            <element signature="e#14058#20985#0" />
+            <element signature="e#17614#23452#0" />
+            <element signature="e#25055#28625#0" />
           </folding>
         </state>
       </provider>

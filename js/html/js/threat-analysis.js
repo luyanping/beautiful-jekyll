@@ -8,10 +8,6 @@
         init: function () {
             this.initChinaMapData();
         },
-        //事件相关处理
-        initEvent: function () {
-            var self = this;
-        },
         initChinaMapData: function () {
             var self = this;
             var ele = document.getElementById('china_map');
@@ -26,7 +22,7 @@
                     self.request.abort();
                 }
                 self.getChinaMapData();
-            }, 2000);
+            }, 3000);
         },
         getChinaMapData: function () {
             var self = this;
@@ -74,7 +70,37 @@
             var geoArray = ['安徽', '北京', '重庆', '福建', '甘肃', '广东', '广西', '贵州', '海南', '河北', '河南', '黑龙江', '湖北', '湖南', '吉林', '江苏', '江西', '辽宁', '内蒙古', '宁夏', '青海', '山东', '山西', '陕西', '上海', '海南', '四川', '天津', '西藏', '新疆', '云南', '浙江', '澳门', '台湾', '香港', '福州'];
             var myChart = echarts.getInstanceByDom(ele);
 
-            var dataList = [{"sourceIP":"139.212.221.62","dangerLevel":"1","ruleType":"缓冲区溢出","country":"中国","province":"吉林","city":"长春","createTime":"2018-10-21 15:42:17.0"},{"sourceIP":"139.212.221.62","dangerLevel":"1","ruleType":"缓冲区溢出","country":"中国","province":"吉林","city":"长春","createTime":"2018-10-21 15:42:17.0"},{"sourceIP":"223.104.1.242","dangerLevel":"1","ruleType":"缓冲区溢出","country":"中国","province":"广东","city":"","createTime":"2018-10-21 15:42:18.0"},{"sourceIP":"223.104.1.242","dangerLevel":"1","ruleType":"缓冲区溢出","country":"中国","province":"广东","city":"","createTime":"2018-10-21 15:42:18.0"}];
+            var list1 = [
+                    {"dangerLevel":"1","province":"吉林"},
+                    {"dangerLevel":"3","province":"吉林"},
+                    {"dangerLevel":"2","province":"内蒙古"},
+                    {"dangerLevel":"1","province":"广东"}
+                ];
+            var list2 = [
+                    {"dangerLevel":"1","province":"新疆"},
+                    {"dangerLevel":"3","province":"青海"},
+                    {"dangerLevel":"2","province":"上海"},
+                    {"dangerLevel":"2","province":"辽宁"},
+                    {"dangerLevel":"1","province":"四川"},
+                    {"dangerLevel":"1","province":"四川"},
+                    {"dangerLevel":"1","province":"四川"}
+                ];
+            var list3 = [
+                    {"dangerLevel":"1","province":"河北"},
+                    {"dangerLevel":"1","province":"河北"},
+                    {"dangerLevel":"1","province":"河北"},
+                    {"dangerLevel":"1","province":"河北"},
+                    {"dangerLevel":"3","province":"山西"},
+                    {"dangerLevel":"2","province":"西藏"},
+                    {"dangerLevel":"2","province":"云南"},
+                    {"dangerLevel":"3","province":"西藏"},
+                    {"dangerLevel":"1","province":"湖南"},
+                    {"dangerLevel":"1","province":"安徽"},
+                    {"dangerLevel":"1","province":"黑龙江"}
+                ];
+            var list = [list1,list2,list3];
+            var num = self.randomFrom(0,2);
+            var dataList = list[num];
             if (!myChart) {
                 self.initChinaMapChart(ele);
             } else {
@@ -316,7 +342,7 @@
                         color: '#ff3333'
                     }],
                     left: '160',
-                    bottom: '250',
+                    bottom: '50',
                     textStyle: {
                         color: '#fff',
                         fontSize: 12
@@ -633,6 +659,10 @@
             window.onresize = function () {
                 myChart.resize();
             }
+        },
+        //获取指定区间范围随机数，包括lowerValue和upperValue
+        randomFrom: function (lowerValue, upperValue) {
+            return Math.floor(Math.random() * (upperValue - lowerValue + 1) + lowerValue);
         }
 
 
