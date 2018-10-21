@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 这是一个测试的网页
-image: /img/bootstrap.png
+image: /img/chinaMap.png
 ---
 
 ### 这是一个测试的网页，测试嵌入iframe
