@@ -17,12 +17,10 @@
                 myChart = null;
             }
             self.getChinaMapData();
+            self.getChinaMapData();
             self.mapTimer1 = setInterval(function () {
-                if (self.request) {
-                    self.request.abort();
-                }
                 self.getChinaMapData();
-            }, 3000);
+            }, 5000);
         },
         getChinaMapData: function () {
             var self = this;
@@ -74,23 +72,20 @@
                     {"dangerLevel":"1","province":"吉林"},
                     {"dangerLevel":"3","province":"吉林"},
                     {"dangerLevel":"2","province":"内蒙古"},
+                    {"dangerLevel":"2","province":"青海"},
                     {"dangerLevel":"1","province":"广东"}
                 ];
             var list2 = [
                     {"dangerLevel":"1","province":"新疆"},
-                    {"dangerLevel":"3","province":"青海"},
-                    {"dangerLevel":"2","province":"上海"},
+                    {"dangerLevel":"1","province":"上海"},
                     {"dangerLevel":"2","province":"辽宁"},
-                    {"dangerLevel":"1","province":"四川"},
-                    {"dangerLevel":"1","province":"四川"},
+                    {"dangerLevel":"3","province":"四川"},
+                    {"dangerLevel":"3","province":"四川"},
                     {"dangerLevel":"1","province":"四川"}
                 ];
             var list3 = [
                     {"dangerLevel":"1","province":"河北"},
                     {"dangerLevel":"1","province":"河北"},
-                    {"dangerLevel":"1","province":"河北"},
-                    {"dangerLevel":"1","province":"河北"},
-                    {"dangerLevel":"3","province":"山西"},
                     {"dangerLevel":"2","province":"西藏"},
                     {"dangerLevel":"2","province":"云南"},
                     {"dangerLevel":"3","province":"西藏"},
@@ -100,7 +95,7 @@
                 ];
             var list = [list1,list2,list3];
             var num = self.randomFrom(0,2);
-            var dataList = list[num];
+            var dataList = list[2];
             if (!myChart) {
                 self.initChinaMapChart(ele);
             } else {
