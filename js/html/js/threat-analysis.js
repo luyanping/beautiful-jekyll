@@ -86,6 +86,7 @@
             var list3 = [
                     {"dangerLevel":"1","province":"河北"},
                     {"dangerLevel":"1","province":"河北"},
+                    {"dangerLevel":"1","province":"河北"},
                     {"dangerLevel":"2","province":"西藏"},
                     {"dangerLevel":"2","province":"云南"},
                     {"dangerLevel":"3","province":"西藏"},
@@ -95,7 +96,7 @@
                 ];
             var list = [list1,list2,list3];
             var num = self.randomFrom(0,2);
-            var dataList = list[2];
+            var dataList = list[num];
             if (!myChart) {
                 self.initChinaMapChart(ele);
             } else {
