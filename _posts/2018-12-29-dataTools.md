@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 安装配置包失败案例
-image: /img/jTopo1.png
+image: /img/dataTools/img1.png
 ---
 
 #### 安装配置包失败案例
