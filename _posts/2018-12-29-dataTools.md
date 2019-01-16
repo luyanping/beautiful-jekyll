@@ -101,13 +101,12 @@ npm输入
 npm config ls -l 
 ```
         
-出现了如下内容
-
+出现了如下内容    
 ![](/img/dataTools/img10.jpg)
       
-里面有一条：
-    
-![](/img/dataTools/img11.jpg)      
+里面有一条：       
+![](/img/dataTools/img11.jpg) 
+
 由此推断应该是安装成功了。  
 重新到项目中,`npm install`，这次终于成功了！
 
