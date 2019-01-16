@@ -14,7 +14,8 @@ image: /img/dataTools/img1.png
 
 该项目文件夹下打开PowerShell命令窗口
 
-![](/img/dataTools/img7.png)
+![](/img/dataTools/img7.png)    
+
 执行 `yarn install`命令：
 
 ![](/img/dataTools/img1.png)
@@ -99,7 +100,9 @@ npm输入
 ```js
 npm config ls -l 
 ```
+        
 出现了如下内容
+
 ![](/img/dataTools/img10.jpg)
 里面有一条：  
 ![](/img/dataTools/img11.jpg)   
